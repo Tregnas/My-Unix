@@ -27,6 +27,9 @@ reset=$(tput sgr0)
 # Resetting prompt colors
 export PS1='\[$cyan\]\u\[$green\][\h]\[$reset\]:\[$blue\]\w\[$reset\]\$ '
 
+# Adding timestamps to history
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
 # Show me the size (sorted) of only the folders in this directory
 alias folders='find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn'
 
